@@ -1,0 +1,15 @@
+CREATE TABLE game(
+id INTEGER NOT NULL PRIMARY KEY,
+image TEXT NOT NULL,
+name TEXT NOT NULL);
+
+upsert:
+INSERT OR REPLACE INTO game(id,image,name) VALUES(?,?,?);
+
+getAllGames:
+SELECT * FROM game;
+
+delete:
+DELETE FROM game WHERE id=?;
+
+
